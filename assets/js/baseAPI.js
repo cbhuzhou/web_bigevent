@@ -12,8 +12,8 @@ $.ajaxPrefilter(function (options) {
   }
   //全局统一挂载complete回调函数
   options.complete = function (res) {
-    console.log('执行了complete');
-    console.log(res);
+    // console.log('执行了complete');
+    // console.log(res);
     //可以使用res.responseJSON拿到数据
     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
       //1.强制清空token
